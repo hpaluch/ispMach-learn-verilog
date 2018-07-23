@@ -1,0 +1,11 @@
+JDF B
+// Created by Version 2.0 
+PROJECT bb_learn
+DESIGN bb_learn Normal
+DEVKIT LC4256ZE-5TN144C
+ENTRY Pure Verilog HDL
+MODULE bb_top.v
+MODSTYLE bb_top Normal
+SYNTHESIS_TOOL Synplify
+SIMULATOR_TOOL ActiveHDL
+TOPMODULE bb_top
