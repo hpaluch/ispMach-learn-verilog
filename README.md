@@ -35,6 +35,9 @@ Our [PostFit Equations][] are that simple:
 led = nrst ; (1 pterm, 1 signal)
 ```
 
+And here is _RTL View_ from `bb_top.prj` using _Synplify Pro_:
+
+![RTL View](https://github.com/hpaluch/ispMach-learn-verilog/blob/master/images/rtl-view.png?raw=true)
 
 
 # Project outputs
