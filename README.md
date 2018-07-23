@@ -13,6 +13,30 @@ Also read
 for step by step guide how to create and program basic
 project - with RESET button.                                       
 
+# Project status
+
+Our simplest Verilog file [bb_top.v]
+looks like this:
+```v
+module bb_top(led,nrst);
+  output led;
+  input nrst;
+
+  assign led[0] = nrst;
+
+endmodule
+```
+
+We just copy _negative reset_ (`nrst`) to LED D1 `led` (please note
+that on board this LED is also negative - it lights on logical `1` output).
+
+Our [PostFit Equations][] are that simple:
+```
+led = nrst ; (1 pterm, 1 signal)
+```
+
+
+
 # Project outputs
 
 Please see [Latest project reports][] files including
@@ -26,3 +50,5 @@ Please see [Latest project reports][] files including
 [Latest project reports]: https://hpaluch.github.io/ispMach-learn-verilog/
 [HTML report]: https://hpaluch.github.io/ispMach-learn-verilog/bb_learn.html
 [JEDEC]: https://hpaluch.github.io/ispMach-learn-verilog/bb_learn.jed
+[bb_top.v]: https://github.com/hpaluch/ispMach-learn-verilog/blob/399dbd8f46ff4885d6c123b5c8e1caa9a70c43cc/bb_top.v
+[PostFit Equations]:https://hpaluch.github.io/ispMach-learn-verilog/bb_learn_rpt.html#PostFit_Equations
