@@ -21,7 +21,7 @@ Tools->Fitter Report File Format...
 <BR>
 Project Name         :  bb_learn
 Project Path         :  C:\projects\ispMach-learn-verilog
-Project Fitted on    :  Tue Jul 24 18:08:58 2018
+Project Fitted on    :  Tue Jul 24 19:29:02 2018
 
 Device               :  M4256_96
 Package              :  144
@@ -38,7 +38,7 @@ Source Format        :  Pure_Verilog_HDL
 <A name="Compilation_Times"></A><FONT COLOR=maroon><U><B><big>Compilation_Times</big></B></U></FONT>
 <BR>
 Prefit Time                     0 secs
-Load Design Time                0.03 secs
+Load Design Time                0.05 secs
 Partition Time                  0.00 secs
 Place Time                      0.00 secs
 Route Time                      0.00 secs
@@ -48,18 +48,18 @@ Total Fit Time                  00:00:01
 <A name="Design_Summary"></A><FONT COLOR=maroon><U><B><big>Design_Summary</big></B></U></FONT>
 <BR>
 Total Input Pins                1
-Total Logic Functions           1
-  Total Output Pins             1
+Total Logic Functions           8
+  Total Output Pins             8
   Total Bidir I/O Pins          0
   Total Buried Nodes            0
 Total Flip-Flops                0
   Total D Flip-Flops            0
   Total T Flip-Flops            0
   Total Latches                 0
-Total Product Terms             1
+Total Product Terms             8
 
 Total Reserved Pins             0
-Total Locked Pins               2
+Total Locked Pins               9
 Total Locked Nodes              0
 
 Total Unique Output Enables     0
@@ -80,14 +80,14 @@ Fmax Logic Levels               -
   Clock/Input Pins                  4        0      4    -->     0
   Input-Only Pins                  10        1      9    -->    10
   I/O / Enable Pins                 2        0      2    -->     0
-I/O Pins                           94        1     93    -->     1
-Logic Functions                   256        1    255    -->     0
+I/O Pins                           94        8     86    -->     8
+Logic Functions                   256        8    248    -->     3
   Input Registers                  96        0     96    -->     0
 
 GLB Inputs                        576        1    575    -->     0
-Logical Product Terms            1280        1   1279    -->     0
-Occupied GLBs                      16        1     15    -->     6
-Macrocells                        256        1    255    -->     0
+Logical Product Terms            1280        8   1272    -->     0
+Occupied GLBs                      16        2     14    -->    12
+Macrocells                        256        8    248    -->     3
 
 Control Product Terms:
   GLB Clock/Clock Enables          16        0     16    -->     0
@@ -130,8 +130,8 @@ Maximum
   GLB    G      0     0     0      0/6      0    0      0             16        0        0
   GLB    H      0     0     0      0/6      0    0      0             16        0        0
 -------------------------------------------------------------------------------------------
-  GLB    I      0     0     0      0/6      0    0      0             16        0        0
-  GLB    J      1     0     1      1/6      0    1      0             15        1        1
+  GLB    I      0     0     0      6/6      0    6      0             10        6        6
+  GLB    J      0     1     1      2/6      0    2      0             14        2        2
   GLB    K      0     0     0      0/6      0    0      0             16        0        0
   GLB    L      0     0     0      0/6      0    0      0             16        0        0
 -------------------------------------------------------------------------------------------
@@ -140,7 +140,7 @@ Maximum
   GLB    O      0     0     0      0/6      0    0      0             16        0        0
   GLB    P      0     0     0      0/6      0    0      0             16        0        0
 -------------------------------------------------------------------------------------------
-TOTALS:         1     0     1      1/96     0    1      0            255        1        1
+TOTALS:         0     1     1      8/96     0    8      0            248        8        8
 
 &lt;Note&gt; 1 : For ispMACH 4000 devices, the number of IOs depends on the GLB.
 &lt;Note&gt; 2 : Four rightmost columns above reflect last status of the placement process.
@@ -302,20 +302,20 @@ Pin No| Type  |Number|Pad |Pin     |     I/O Type    | Type  | Signal name| Enab
 55    |GNDIO1 |   -  |    |        |                 |       |            |
 56    |INCLK2 |   1  |    |        |                 |       |            |
 57    | VCC   |   -  |    |        |                 |       |            |
-58    |  I_O  |   1  |I2  |        |                 |       |            |
-59    |  I_O  |   1  |I4  |        |                 |       |            |
-60    |  I_O  |   1  |I6  |        |                 |       |            |
-61    |  I_O  |   1  |I8  |        |                 |       |            |
-62    |  I_O  |   1  |I10 |        |                 |       |            |
-63    |  I_O  |   1  |I12 |        |                 |       |            |
+58    |  I_O  |   1  |I2  |    *   |LVCMOS33         | Output|<A href=#6>nled_7_</A>|
+59    |  I_O  |   1  |I4  |    *   |LVCMOS33         | Output|<A href=#8>nled_6_</A>|
+60    |  I_O  |   1  |I6  |    *   |LVCMOS33         | Output|<A href=#9>nled_5_</A>|
+61    |  I_O  |   1  |I8  |    *   |LVCMOS33         | Output|<A href=#10>nled_4_</A>|
+62    |  I_O  |   1  |I10 |    *   |LVCMOS33         | Output|<A href=#11>nled_3_</A>|
+63    |  I_O  |   1  |I12 |    *   |LVCMOS33         | Output|<A href=#12>nled_2_</A>|
 64    |VCCIO1 |   -  |    |        |                 |       |            |
 65    |GNDIO1 |   -  |    |        |                 |       |            |
 66    |  I_O  |   1  |J2  |        |                 |       |            |
 67    |  I_O  |   1  |J4  |        |                 |       |            |
 68    |  I_O  |   1  |J6  |        |                 |       |            |
 69    |  I_O  |   1  |J8  |        |                 |       |            |
-70    |  I_O  |   1  |J10 |        |                 |       |            |
-71    |  I_O  |   1  |J12 |    *   |LVCMOS33         | Output|<A href=#6>nled</A>|
+70    |  I_O  |   1  |J10 |    *   |LVCMOS33         | Output|<A href=#13>nled_1_</A>|
+71    |  I_O  |   1  |J12 |    *   |LVCMOS33         | Output|<A href=#14>nled_0_</A>|
 72    | IN4   |   0  |    |    *   |LVCMOS33         | Input |<A href=#7>nrst</A>|
 73    | GND   |   -  |    |        |                 |       |            |
 74    | TMS   |   -  |    |        |                 |       |            |
@@ -417,9 +417,16 @@ Pin No| Type  |Number|Pad |Pin     |     I/O Type    | Type  | Signal name| Enab
 <B>          I         C      P R P       O Output
           N         L Mc   R E U C O F B Fanout
  Pin GLB  P LL PTs  S Type E S P E E P P                     Slew Pullup Signal
-</B>-------------------------------------------------------------------------------
-  71   J  1  1   1  1 COM                   ----------------  Fast    Off <A href=#6>nled</A>
--------------------------------------------------------------------------------
+</B>--------------------------------------------------------------------------------
+  71   J  1  1   1  1 COM                   ----------------  Fast    Off <A href=#14>nled_0_</A>
+  70   J  1  1   1  1 COM                   ----------------  Fast    Off <A href=#13>nled_1_</A>
+  63   I  0  -   1  1 COM                   ----------------  Fast    Off <A href=#12>nled_2_</A>
+  62   I  0  -   1  1 COM                   ----------------  Fast    Off <A href=#11>nled_3_</A>
+  61   I  0  -   1  1 COM                   ----------------  Fast    Off <A href=#10>nled_4_</A>
+  60   I  0  -   1  1 COM                   ----------------  Fast    Off <A href=#9>nled_5_</A>
+  59   I  0  -   1  1 COM                   ----------------  Fast    Off <A href=#8>nled_6_</A>
+  58   I  0  -   1  1 COM                   ----------------  Fast    Off <A href=#6>nled_7_</A>
+--------------------------------------------------------------------------------
 
 &lt;Note&gt; CLS = Number of clusters used
        INP = Number of input signals
@@ -461,7 +468,21 @@ Pin No| Type  |Number|Pad |Pin     |     I/O Type    | Type  | Signal name| Enab
 
 <A name="PostFit_Equations"></A><FONT COLOR=maroon><U><B><big>PostFit_Equations</big></B></U></FONT>
 <BR>
-<A name=6>nled</A> = <A href=#7>nrst</A> ; (1 pterm, 1 signal)
+<A name=14>nled_0_</A> = <A href=#7>nrst</A> ; (1 pterm, 1 signal)
+
+<A name=13>nled_1_</A> = !<A href=#7>nrst</A> ; (1 pterm, 1 signal)
+
+<A name=12>nled_2_</A> = 1 ; (1 pterm, 0 signal)
+
+<A name=11>nled_3_</A> = 1 ; (1 pterm, 0 signal)
+
+<A name=10>nled_4_</A> = 1 ; (1 pterm, 0 signal)
+
+<A name=9>nled_5_</A> = 1 ; (1 pterm, 0 signal)
+
+<A name=8>nled_6_</A> = 1 ; (1 pterm, 0 signal)
+
+<A name=6>nled_7_</A> = 1 ; (1 pterm, 0 signal)
 
 <BR>
 <BR>

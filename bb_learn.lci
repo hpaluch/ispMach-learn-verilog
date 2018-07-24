@@ -13,7 +13,7 @@ EN_PinMacrocell = yes;
 [Revision]
 Parent = lc4k256e.lci;
 DATE = 07/24/2018;
-TIME = 18:08:32;
+TIME = 19:28:19;
 Source_Format = Pure_Verilog_HDL;
 Synthesis = Synplify;
 
@@ -28,7 +28,14 @@ Synthesis = Synplify;
 [Location Assignments]
 layer = OFF;
 nrst = Pin, 72, -, -, -;
-nled = Pin, 71, -, J, 12;
+nled_0_ = Pin, 71, -, J, 12;
+nled_1_ = Pin, 70, -, J, 10;
+nled_2_ = Pin, 63, -, I, 12;
+nled_3_ = Pin, 62, -, I, 10;
+nled_4_ = Pin, 61, -, I, 8;
+nled_5_ = Pin, 60, -, I, 6;
+nled_6_ = Pin, 59, -, I, 4;
+nled_7_ = Pin, 58, -, I, 2;
 
 [Group Assignments]
 layer = OFF;
@@ -54,13 +61,20 @@ NetList = VERILOG;
 [IO Types]
 layer = OFF;
 nrst = LVCMOS33, PIN, 1, -;
-nled = LVCMOS33, PIN, 1, -;
+nled_0_ = LVCMOS33, PIN, 1, -;
+nled_1_ = LVCMOS33, PIN, 1, -;
+nled_2_ = LVCMOS33, PIN, 1, -;
+nled_3_ = LVCMOS33, PIN, 1, -;
+nled_4_ = LVCMOS33, PIN, 1, -;
+nled_5_ = LVCMOS33, PIN, 1, -;
+nled_6_ = LVCMOS33, PIN, 1, -;
+nled_7_ = LVCMOS33, PIN, 1, -;
 
 [Pullup]
-OFF = nrst, nled;
+OFF = nrst, nled_0_, nled_1_, nled_2_, nled_3_, nled_4_, nled_5_, nled_6_, nled_7_;
 
 [Slewrate]
-FAST = nled;
+FAST = nled_0_, nled_1_, nled_2_, nled_3_, nled_4_, nled_5_, nled_6_;
 
 [Region]
 
