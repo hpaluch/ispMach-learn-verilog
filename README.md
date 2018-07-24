@@ -14,8 +14,7 @@ Please go to [Main Project Page] for table of contents and introduction
 
 # Lesson 1 - direct wire
 
-We just copy _negative reset_ (`nrst`) to negative LED D1 `nled` (please note
-that on board this LED is also negative - it lights on logical `1` output).
+We just copy _negative reset_ (`nrst`) to negative LED D1 `nled`.
 
 This circuit uses following signals/names:
 
