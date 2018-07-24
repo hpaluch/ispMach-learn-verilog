@@ -15,14 +15,15 @@ that on board this LED is also negative - it lights on logical `1` output).
 
 This circuit uses following signals/names:
 
-Name|Pin|Directrion|Function
+Name|Pin|Direction|Function
+----|---|---------|--------
 nrst|72|Input|Negative RESET - active in `0` right after powerup or on button press
 nled|71|Output|Negative LED D1 on board - ligts when `0` on input
 
 
 Our simplest Verilog file [bb_top.v]
 looks like this:
-```v
+```verilog
 module bb_top(nled,nrst);
   output nled;
   input nrst;
@@ -31,7 +32,6 @@ module bb_top(nled,nrst);
 
 endmodule
 ```
-
 
 Our _PostFit Equations_ are that simple:
 ```
