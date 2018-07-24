@@ -21,7 +21,7 @@ Tools->Fitter Report File Format...
 <BR>
 Project Name         :  bb_learn
 Project Path         :  C:\projects\ispMach-learn-verilog
-Project Fitted on    :  Mon Jul 23 19:46:59 2018
+Project Fitted on    :  Tue Jul 24 18:08:58 2018
 
 Device               :  M4256_96
 Package              :  144
@@ -38,7 +38,7 @@ Source Format        :  Pure_Verilog_HDL
 <A name="Compilation_Times"></A><FONT COLOR=maroon><U><B><big>Compilation_Times</big></B></U></FONT>
 <BR>
 Prefit Time                     0 secs
-Load Design Time                0.02 secs
+Load Design Time                0.03 secs
 Partition Time                  0.00 secs
 Place Time                      0.00 secs
 Route Time                      0.00 secs
@@ -315,7 +315,7 @@ Pin No| Type  |Number|Pad |Pin     |     I/O Type    | Type  | Signal name| Enab
 68    |  I_O  |   1  |J6  |        |                 |       |            |
 69    |  I_O  |   1  |J8  |        |                 |       |            |
 70    |  I_O  |   1  |J10 |        |                 |       |            |
-71    |  I_O  |   1  |J12 |    *   |LVCMOS33         | Output|<A href=#6>led</A>|
+71    |  I_O  |   1  |J12 |    *   |LVCMOS33         | Output|<A href=#6>nled</A>|
 72    | IN4   |   0  |    |    *   |LVCMOS33         | Input |<A href=#7>nrst</A>|
 73    | GND   |   -  |    |        |                 |       |            |
 74    | TMS   |   -  |    |        |                 |       |            |
@@ -418,7 +418,7 @@ Pin No| Type  |Number|Pad |Pin     |     I/O Type    | Type  | Signal name| Enab
           N         L Mc   R E U C O F B Fanout
  Pin GLB  P LL PTs  S Type E S P E E P P                     Slew Pullup Signal
 </B>-------------------------------------------------------------------------------
-  71   J  1  1   1  1 COM                   ----------------  Fast    Off <A href=#6>led</A>
+  71   J  1  1   1  1 COM                   ----------------  Fast    Off <A href=#6>nled</A>
 -------------------------------------------------------------------------------
 
 &lt;Note&gt; CLS = Number of clusters used
@@ -461,7 +461,7 @@ Pin No| Type  |Number|Pad |Pin     |     I/O Type    | Type  | Signal name| Enab
 
 <A name="PostFit_Equations"></A><FONT COLOR=maroon><U><B><big>PostFit_Equations</big></B></U></FONT>
 <BR>
-<A name=6>led</A> = <A href=#7>nrst</A> ; (1 pterm, 1 signal)
+<A name=6>nled</A> = <A href=#7>nrst</A> ; (1 pterm, 1 signal)
 
 <BR>
 <BR>
