@@ -11,6 +11,7 @@ Requirements - please read/setup following:
 # List of lessons
 
 * [Lesson 1 - direct wire]
+* [Lesson 2 - inverter]
 
 # Latest project output
 Here are outputs from latest `master` branch:
@@ -25,4 +26,6 @@ Here are outputs from latest `master` branch:
 [HTML report]: https://hpaluch.github.io/ispMach-learn-verilog/bb_learn.html
 [JEDEC]: https://hpaluch.github.io/ispMach-learn-verilog/bb_learn.jed
 [PostFit Equations]:https://hpaluch.github.io/ispMach-learn-verilog/bb_learn_rpt.html#PostFit_Equations
-[Lesson 1 - direct wire]: https://github.com/hpaluch/ispMach-learn-verilog/tree/b-lesson1-direct-wire 
+[Lesson 1 - direct wire]: https://github.com/hpaluch/ispMach-learn-verilog/tree/b-lesson1-direct-wire
+[Lesson 2 - inverter]: https://github.com/hpaluch/ispMach-learn-verilog/tree/b-lesson2-invert
+ 
