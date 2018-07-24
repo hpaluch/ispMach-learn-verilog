@@ -12,8 +12,8 @@ EN_PinMacrocell = yes;
 
 [Revision]
 Parent = lc4k256e.lci;
-DATE = 07/23/2018;
-TIME = 19:46:45;
+DATE = 07/24/2018;
+TIME = 18:08:32;
 Source_Format = Pure_Verilog_HDL;
 Synthesis = Synplify;
 
@@ -28,7 +28,7 @@ Synthesis = Synplify;
 [Location Assignments]
 layer = OFF;
 nrst = Pin, 72, -, -, -;
-led = Pin, 71, -, J, 12;
+nled = Pin, 71, -, J, 12;
 
 [Group Assignments]
 layer = OFF;
@@ -54,13 +54,13 @@ NetList = VERILOG;
 [IO Types]
 layer = OFF;
 nrst = LVCMOS33, PIN, 1, -;
-led = LVCMOS33, PIN, 1, -;
+nled = LVCMOS33, PIN, 1, -;
 
 [Pullup]
-OFF = nrst, led;
+OFF = nrst, nled;
 
 [Slewrate]
-FAST = led;
+FAST = nled;
 
 [Region]
 

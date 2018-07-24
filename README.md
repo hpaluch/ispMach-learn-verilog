@@ -3,36 +3,39 @@
 Learning Verilog HDL using cheap [ispMACH 4256ZE Breakout Board][]
 
 > The goal is to learn Verilog HDL basics using simples possible tools...
-                                                                  
-Please see my introductory tutorial
-[Getting started with ispMACH 4256ZE Breakout Board][]
-for software and hardware requirements.
 
-Also read 
-[Adding RESET button to ispMACH 4256ZE Breakout Board][]
-for step by step guide how to create and program basic
-project - with RESET button.                                       
+Requirements - please read/setup followng:
+* [Getting started with ispMACH 4256ZE Breakout Board][]
+* [Adding RESET button to ispMACH 4256ZE Breakout Board][]
 
-# Project status
+# Lesson 1 - dircet wire
+
+We just copy _negative reset_ (`nrst`) to negative LED D1 `nled` (please note
+that on board this LED is also negative - it lights on logical `1` output).
+
+This circuit uses following signals/names:
+
+Name|Pin|Directrion|Function
+nrst|72|Input|Negative RESET - active in `0` right after powerup or on button press
+nled|71|Output|Negative LED D1 on board - ligts when `0` on input
+
 
 Our simplest Verilog file [bb_top.v]
 looks like this:
 ```v
-module bb_top(led,nrst);
-  output led;
+module bb_top(nled,nrst);
+  output nled;
   input nrst;
 
-  assign led[0] = nrst;
+  assign nled = nrst;
 
 endmodule
 ```
 
-We just copy _negative reset_ (`nrst`) to LED D1 `led` (please note
-that on board this LED is also negative - it lights on logical `1` output).
 
-Our [PostFit Equations][] are that simple:
+Our _PostFit Equations_ are that simple:
 ```
-led = nrst ; (1 pterm, 1 signal)
+nled = nrst ; (1 pterm, 1 signal)
 ```
 
 And here is _RTL View_ from `bb_top.prj` using _Synplify Pro_:
@@ -42,10 +45,13 @@ And here is _RTL View_ from `bb_top.prj` using _Synplify Pro_:
 
 # Project outputs
 
-Please see [Latest project reports][] files including
-[HTML report][] and [JEDEC][] programming file. 
+Please checkout right versions of report (GitHub pages show latest report only.)
 
-
+# Latest project output
+Here are outputs from latest `master` branch:
+* [Latest project reports]  - splash screen
+* [HTML report] - main synthesis report 
+* [PostFit Equations] - latest postfit equations
 
 [ispMACH 4256ZE Breakout Board]: http://www.latticesemi.com/Products/DevelopmentBoardsAndKits/ispMACH4256ZEBreakoutBoard.aspx
 [Getting started with ispMACH 4256ZE Breakout Board]: https://github.com/hpaluch/hpaluch.github.io/wiki/Getting-started-with-ispMACH-4256ZE-Breakout-Board

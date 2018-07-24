@@ -2,10 +2,10 @@
 //
 // Top Level module
 //
-module bb_top(led,nrst);
-  output led;
+module bb_top(nled,nrst);
+  output nled;
   input nrst;
 
-  assign led[0] = nrst;
+  assign nled = nrst;
 
 endmodule

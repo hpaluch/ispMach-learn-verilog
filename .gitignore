@@ -52,4 +52,5 @@ synlog
 *.rs2
 *.txt
 *.prs
-
+syndos.env
+*.lc_
