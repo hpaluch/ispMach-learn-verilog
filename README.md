@@ -10,7 +10,7 @@ Requirements - please read/setup following:
 
 # Table of contents
 
-Plese go to [Main Project Page] for table of contents and introduction
+Please go to [Main Project Page] for table of contents and introduction
 
 # Lesson 1 - direct wire
 
@@ -22,7 +22,7 @@ This circuit uses following signals/names:
 Name|Pin|Direction|Function
 ----|---|---------|--------
 nrst|72|Input|Negative RESET - active in `0` right after power-up or on button press
-nled|71|Output|Negative LED D1 on board - ligts when `0` on input
+nled|71|Output|Negative LED D1 on board - lights when `0` on input
 
 
 Our simplest Verilog file [bb_top.v]
@@ -44,8 +44,8 @@ nled = nrst ; (1 pterm, 1 signal)
 
 And here is _RTL View_ from `bb_top.prj` using _Synplify Pro_:
 
-![RTL View](https://github.com/hpaluch/ispMach-learn-verilog/blob/master/images/rtl-view.png?raw=true)
-
+![RTL View](https://raw.githubusercontent.com/hpaluch/ispMach-learn-verilog/b-lesson1-direct-wire/images/rtl-view.png)
+            
 
 # Project outputs
 
@@ -55,8 +55,6 @@ Please checkout right versions of report (GitHub pages show latest report only.)
 [ispMACH 4256ZE Breakout Board]: http://www.latticesemi.com/Products/DevelopmentBoardsAndKits/ispMACH4256ZEBreakoutBoard.aspx
 [Getting started with ispMACH 4256ZE Breakout Board]: https://github.com/hpaluch/hpaluch.github.io/wiki/Getting-started-with-ispMACH-4256ZE-Breakout-Board
 [Adding RESET button to ispMACH 4256ZE Breakout Board]: https://github.com/hpaluch/hpaluch.github.io/wiki/Adding-RESET-button-to-ispMACH-4256ZE-Breakout-Board
-[Latest project reports]: https://hpaluch.github.io/ispMach-learn-verilog/
-[HTML report]: https://hpaluch.github.io/ispMach-learn-verilog/bb_learn.html
-[JEDEC]: https://hpaluch.github.io/ispMach-learn-verilog/bb_learn.jed
-[bb_top.v]: https://github.com/hpaluch/ispMach-learn-verilog/blob/50855298dfcba6d568ee74d0cd7eacdf01f259cf/bb_top.v
-[PostFit Equations]:https://hpaluch.github.io/ispMach-learn-verilog/bb_learn_rpt.html#PostFit_Equations
+[JEDEC]: https://github.com/hpaluch/ispMach-learn-verilog/blob/b-lesson1-direct-wire/bb_learn.jed 
+[bb_top.v]: https://github.com/hpaluch/ispMach-learn-verilog/blob/b-lesson1-direct-wire/bb_top.v
+[Main Project Page]: https://github.com/hpaluch/ispMach-learn-verilog
