@@ -4,11 +4,11 @@ Learning Verilog HDL using cheap [ispMACH 4256ZE Breakout Board][]
 
 > The goal is to learn Verilog HDL basics using simples possible tools...
 
-Requirements - please read/setup followng:
+Requirements - please read/setup following:
 * [Getting started with ispMACH 4256ZE Breakout Board][]
 * [Adding RESET button to ispMACH 4256ZE Breakout Board][]
 
-# Lesson 1 - dircet wire
+# Lesson 1 - direct wire
 
 We just copy _negative reset_ (`nrst`) to negative LED D1 `nled` (please note
 that on board this LED is also negative - it lights on logical `1` output).
@@ -17,7 +17,7 @@ This circuit uses following signals/names:
 
 Name|Pin|Direction|Function
 ----|---|---------|--------
-nrst|72|Input|Negative RESET - active in `0` right after powerup or on button press
+nrst|72|Input|Negative RESET - active in `0` right after power-up or on button press
 nled|71|Output|Negative LED D1 on board - ligts when `0` on input
 
 
