@@ -8,6 +8,10 @@ Requirements - please read/setup following:
 * [Getting started with ispMACH 4256ZE Breakout Board][]
 * [Adding RESET button to ispMACH 4256ZE Breakout Board][]
 
+# Table of contents
+
+Plese go to [Main Project Page] for table of contents and introduction
+
 # Lesson 1 - direct wire
 
 We just copy _negative reset_ (`nrst`) to negative LED D1 `nled` (please note
@@ -47,11 +51,6 @@ And here is _RTL View_ from `bb_top.prj` using _Synplify Pro_:
 
 Please checkout right versions of report (GitHub pages show latest report only.)
 
-# Latest project output
-Here are outputs from latest `master` branch:
-* [Latest project reports]  - splash screen
-* [HTML report] - main synthesis report 
-* [PostFit Equations] - latest postfit equations
 
 [ispMACH 4256ZE Breakout Board]: http://www.latticesemi.com/Products/DevelopmentBoardsAndKits/ispMACH4256ZEBreakoutBoard.aspx
 [Getting started with ispMACH 4256ZE Breakout Board]: https://github.com/hpaluch/hpaluch.github.io/wiki/Getting-started-with-ispMACH-4256ZE-Breakout-Board
