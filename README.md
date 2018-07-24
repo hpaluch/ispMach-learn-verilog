@@ -59,5 +59,5 @@ Here are outputs from latest `master` branch:
 [Latest project reports]: https://hpaluch.github.io/ispMach-learn-verilog/
 [HTML report]: https://hpaluch.github.io/ispMach-learn-verilog/bb_learn.html
 [JEDEC]: https://hpaluch.github.io/ispMach-learn-verilog/bb_learn.jed
-[bb_top.v]: https://github.com/hpaluch/ispMach-learn-verilog/blob/399dbd8f46ff4885d6c123b5c8e1caa9a70c43cc/bb_top.v
+[bb_top.v]: https://github.com/hpaluch/ispMach-learn-verilog/blob/50855298dfcba6d568ee74d0cd7eacdf01f259cf/bb_top.v
 [PostFit Equations]:https://hpaluch.github.io/ispMach-learn-verilog/bb_learn_rpt.html#PostFit_Equations
