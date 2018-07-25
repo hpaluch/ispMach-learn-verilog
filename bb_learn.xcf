@@ -19,7 +19,7 @@
 				<BScanVal>0</BScanVal>
 			</Bypass>
 			<File>C:\projects\ispMach-learn-verilog\bb_learn.jed</File>
-			<FileTime>07/25/18 18:25:07</FileTime>
+			<FileTime>07/25/18 19:34:33</FileTime>
 			<JedecChecksum>0xE8F1</JedecChecksum>
 			<Operation>Erase,Program,Verify</Operation>
 			<Option>
