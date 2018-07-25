@@ -19,8 +19,8 @@
 				<BScanVal>0</BScanVal>
 			</Bypass>
 			<File>C:\projects\ispMach-learn-verilog\bb_learn.jed</File>
-			<FileTime>07/25/18 18:17:52</FileTime>
-			<JedecChecksum>0xE789</JedecChecksum>
+			<FileTime>07/25/18 18:25:07</FileTime>
+			<JedecChecksum>0xE8F1</JedecChecksum>
 			<Operation>Erase,Program,Verify</Operation>
 			<Option>
 				<SVFVendor>JTAG STANDARD</SVFVendor>
