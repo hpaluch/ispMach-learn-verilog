@@ -2,31 +2,111 @@
 
 Learning Verilog HDL using cheap [ispMACH 4256ZE Breakout Board][]
 
-> The goal is to learn Verilog HDL basics using simples possible tools...
+# Table of contents
 
-Requirements - please read/setup following:
-* [Getting started with ispMACH 4256ZE Breakout Board][]
-* [Adding RESET button to ispMACH 4256ZE Breakout Board][]
+Please go to [Main Project Page] for table of contents and introduction
 
-# List of lessons
+# Lesson 2 - inverter
 
-* [Lesson 1 - direct wire]
-* [Lesson 2 - inverter]
-* [Lesson 3 - counter with RESET]
+Now we have 2-bit counter with asynchronous RESET (independent of clock)
 
-# Latest project output
-Here are outputs from latest `master` branch:
-* [Latest project reports]  - splash screen
-* [HTML report] - main synthesis report 
-* [PostFit Equations] - latest postfit equations
+> NOTE:
+>
+> Although counter is hold on `0` value on RESET, the
+> clock `clk` signal is not hold by RESET (it ticks independently)
+
+This circuit uses following signals/names:
+
+Name|Pin|Direction|Function
+----|---|---------|--------
+nrst|72|Input|Negative RESET - active in `0` right after power-up or on button press
+nled[0]|71|Output|lights on when RESET is active (`nrst=0`)
+nled[1]|70|Output|LED D2 - blinks at 4.7Hz timer output on `clk` signal
+nled[2]|63|Output|LED D3 - counter bit 0 - blinks 2x slower than D2
+nled[3]|62|Output|LED D4 - counter bit 1 - blinks 2x slower than D3
+nled[4]|61|Output|LED D5 - off
+nled[5]|60|Output|LED D6 - off
+nled[6]|59|Output|LED D7 - off
+nled[7]|58|Output|LED D8 - off
+
+
+Our Verilog file [bb_top.v]
+looks like this:
+```verilog
+module bb_top(nled,nrst);
+  output [7:0] nled;
+  input nrst;
+
+  wire   rst; // positive RESET
+  assign rst = ~nrst;
+
+  wire  [7:0] led; // positive LEDs
+  assign nled = ~led;
+
+  // now we can use positive logic (1=active, 0=inactive)
+  assign led[0]   = ~rst;
+  assign led[7:4] = 4'h0;
+
+  wire clk; // 4.7Hz internal clock from OSCTIMER module  
+  assign led[1]   = clk; // output 4.7Hz clok on LED D2
+
+  defparam I1.TIMER_DIV = "1048576";
+  OSCTIMER I1 (.DYNOSCDIS(1'b0), .TIMERRES(1'b0), .OSCOUT(), .TIMEROUT(clk) );
+
+  // 2-bit counter (divider by 4)
+  reg    [1:0] counter;
+  assign led[3:2] = counter;
+
+  always @(posedge clk or posedge rst)
+  begin
+    if (rst)
+      counter <= 2'd0;
+    else
+      counter <= counter + 1;
+  end
+
+endmodule
+```
+
+Our _PostFit Equations_ are bellow:
+```
+gnd_n_n = 0 ; (0 pterm, 0 signal)
+
+nled_0_ = !nrst ; (1 pterm, 1 signal)
+
+nled_1_ = !clk ; (1 pterm, 1 signal)
+
+nled_2_.D = !nled_2_.Q ; (1 pterm, 1 signal)
+nled_2_.C = clk ; (1 pterm, 1 signal)
+nled_2_.AP = !nrst ; (1 pterm, 1 signal)
+
+nled_3_.D = nled_3_.Q & nled_2_.Q
+    # !nled_3_.Q & !nled_2_.Q ; (2 pterms, 2 signals)
+nled_3_.C = clk ; (1 pterm, 1 signal)
+nled_3_.AP = !nrst ; (1 pterm, 1 signal)
+
+nled_4_ = 1 ; (1 pterm, 0 signal)
+
+nled_5_ = 1 ; (1 pterm, 0 signal)
+
+nled_6_ = 1 ; (1 pterm, 0 signal)
+
+nled_7_ = 1 ; (1 pterm, 0 signal)
+```
+
+And here is _RTL View_ from `bb_top.prj` using _Synplify Pro_:
+
+![RTL View](https://raw.githubusercontent.com/hpaluch/ispMach-learn-verilog/b-lesson3-counter-w-rst/images/rtl-view.png)
+            
+
+# Project outputs
+
+Please checkout/download this branch to get Project outputs
+
 
 [ispMACH 4256ZE Breakout Board]: http://www.latticesemi.com/Products/DevelopmentBoardsAndKits/ispMACH4256ZEBreakoutBoard.aspx
 [Getting started with ispMACH 4256ZE Breakout Board]: https://github.com/hpaluch/hpaluch.github.io/wiki/Getting-started-with-ispMACH-4256ZE-Breakout-Board
 [Adding RESET button to ispMACH 4256ZE Breakout Board]: https://github.com/hpaluch/hpaluch.github.io/wiki/Adding-RESET-button-to-ispMACH-4256ZE-Breakout-Board
-[Latest project reports]: https://hpaluch.github.io/ispMach-learn-verilog/
-[HTML report]: https://hpaluch.github.io/ispMach-learn-verilog/bb_learn.html
-[JEDEC]: https://hpaluch.github.io/ispMach-learn-verilog/bb_learn.jed
-[PostFit Equations]:https://hpaluch.github.io/ispMach-learn-verilog/bb_learn_rpt.html#PostFit_Equations
-[Lesson 1 - direct wire]: https://github.com/hpaluch/ispMach-learn-verilog/tree/b-lesson1-direct-wire
-[Lesson 2 - inverter]: https://github.com/hpaluch/ispMach-learn-verilog/tree/b-lesson2-invert
-[Lesson 3 - counter with RESET]:  https://github.com/hpaluch/ispMach-learn-verilog/tree/b-lesson3-counter-w-rst 
+[JEDEC]: https://github.com/hpaluch/ispMach-learn-verilog/blob/b-lesson3-counter-w-rst/bb_learn.jed 
+[bb_top.v]: https://github.com/hpaluch/ispMach-learn-verilog/blob/b-lesson3-counter-w-rst/bb_top.v
+[Main Project Page]: https://github.com/hpaluch/ispMach-learn-verilog
