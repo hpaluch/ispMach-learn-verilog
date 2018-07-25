@@ -21,7 +21,7 @@ Tools->Fitter Report File Format...
 <BR>
 Project Name         :  bb_learn
 Project Path         :  C:\projects\ispMach-learn-verilog
-Project Fitted on    :  Wed Jul 25 18:07:46 2018
+Project Fitted on    :  Wed Jul 25 18:17:52 2018
 
 Device               :  M4256_96
 Package              :  144
@@ -39,7 +39,7 @@ Source Format        :  Pure_Verilog_HDL
 <BR>
 Prefit Time                     0 secs
 Load Design Time                0.05 secs
-Partition Time                  0.02 secs
+Partition Time                  0.00 secs
 Place Time                      0.00 secs
 Route Time                      0.00 secs
 Total Fit Time                  00:00:01
@@ -48,10 +48,10 @@ Total Fit Time                  00:00:01
 <A name="Design_Summary"></A><FONT COLOR=maroon><U><B><big>Design_Summary</big></B></U></FONT>
 <BR>
 Total Input Pins                1
-Total Logic Functions           8
+Total Logic Functions           12
   Total Output Pins             8
   Total Bidir I/O Pins          0
-  Total Buried Nodes            0
+  Total Buried Nodes            4
 Total Flip-Flops                0
   Total D Flip-Flops            0
   Total T Flip-Flops            0
@@ -60,7 +60,7 @@ Total Product Terms             8
 
 Total Reserved Pins             0
 Total Locked Pins               9
-Total Locked Nodes              0
+Total Locked Nodes              2
 
 Total Unique Output Enables     0
 Total Unique Clocks             0
@@ -81,13 +81,13 @@ Fmax Logic Levels               -
   Input-Only Pins                  10        1      9    -->    10
   I/O / Enable Pins                 2        0      2    -->     0
 I/O Pins                           94        8     86    -->     8
-Logic Functions                   256        8    248    -->     3
+Logic Functions                   256       11    245    -->     4
   Input Registers                  96        0     96    -->     0
 
-GLB Inputs                        576        1    575    -->     0
+GLB Inputs                        576        2    574    -->     0
 Logical Product Terms            1280        8   1272    -->     0
-Occupied GLBs                      16        2     14    -->    12
-Macrocells                        256        8    248    -->     3
+Occupied GLBs                      16        4     12    -->    25
+Macrocells                        256       10    246    -->     3
 
 Control Product Terms:
   GLB Clock/Clock Enables          16        0     16    -->     0
@@ -98,12 +98,12 @@ Control Product Terms:
   Macrocell Resets                256        0    256    -->     0
   Macrocell Presets               256        0    256    -->     0
 
-Global Routing Pool               356        1    355    -->     0
+Global Routing Pool               356        2    354    -->     0
   GRP from IFB                     ..        0     ..    -->    ..
     (from input signals)           ..        0     ..    -->    ..
     (from output signals)          ..        0     ..    -->    ..
     (from bidir signals)           ..        0     ..    -->    ..
-  GRP from MFB                     ..        1     ..    -->    ..
+  GRP from MFB                     ..        2     ..    -->    ..
 ----------------------------------------------------------------------
 
 &lt;Note&gt; 1 : The available PT is the product term that has not been used.
@@ -122,16 +122,16 @@ Maximum
 </B>-------------------------------------------------------------------------------------------
   GLB    A      0     0     0      0/6      0    0      0             16        0        0
   GLB    B      0     0     0      0/6      0    0      0             16        0        0
-  GLB    C      0     0     0      0/6      0    0      0             16        0        0
+  GLB    C      0     0     0      0/6      0    1      0             15        0        1
   GLB    D      0     0     0      0/6      0    0      0             16        0        0
 -------------------------------------------------------------------------------------------
   GLB    E      0     0     0      0/6      0    0      0             16        0        0
-  GLB    F      0     0     0      0/6      0    0      0             16        0        0
+  GLB    F      0     0     0      0/6      0    1      0             15        0        1
   GLB    G      0     0     0      0/6      0    0      0             16        0        0
   GLB    H      0     0     0      0/6      0    0      0             16        0        0
 -------------------------------------------------------------------------------------------
   GLB    I      0     0     0      6/6      0    6      0             10        6        6
-  GLB    J      0     1     1      2/6      0    2      0             14        2        2
+  GLB    J      2     0     2      2/6      0    2      0             14        2        2
   GLB    K      0     0     0      0/6      0    0      0             16        0        0
   GLB    L      0     0     0      0/6      0    0      0             16        0        0
 -------------------------------------------------------------------------------------------
@@ -140,7 +140,7 @@ Maximum
   GLB    O      0     0     0      0/6      0    0      0             16        0        0
   GLB    P      0     0     0      0/6      0    0      0             16        0        0
 -------------------------------------------------------------------------------------------
-TOTALS:         0     1     1      8/96     0    8      0            248        8        8
+TOTALS:         2     0     2      8/96     0   10      0            246        8       10
 
 &lt;Note&gt; 1 : For ispMACH 4000 devices, the number of IOs depends on the GLB.
 &lt;Note&gt; 2 : Four rightmost columns above reflect last status of the placement process.
@@ -240,11 +240,25 @@ Device Options:
            Bidir and Buried Signal Lists.
 
 
+<A name="OSCTIMER_Summary"></A><FONT COLOR=maroon><U><B><big>OSCTIMER_Summary</big></B></U></FONT>
+<BR>
+OSCTIMER:                         Pin/Node
+  OSCTIMER Instance Name                    I1
+  Dynamic Disable Signal                    gnd_n_n
+  Timer Reset Signal                        _dup_gnd_n_n
+  Oscillator Output Clock         mfb C-15  A0_OSCOUT
+  Timer Output Clock              mfb F-15  clk
+
+  Oscillator Output Clock Frequency         5.0000 MHz
+  Timer Output Clock Frequency              4.7684 Hz
+  Timer Divider                             1048576
+
+
 <A name="Pinout_Listing"></A><FONT COLOR=maroon><U><B><big>Pinout_Listing</big></B></U></FONT>
 <BR>
 <B>      | Pin   | Bank |GLB |Assigned|                 | Signal|            | PG
 Pin No| Type  |Number|Pad |Pin     |     I/O Type    | Type  | Signal name| Enable
-</B>----------------------------------------------------------------------------------
+</B>-----------------------------------------------------------------------------------
 1     | GND   |   -  |    |        |                 |       |            |
 2     | TDI   |   -  |    |        |                 |       |            |
 3     |VCCIO0 |   -  |    |        |                 |       |            |
@@ -389,7 +403,7 @@ Pin No| Type  |Number|Pad |Pin     |     I/O Type    | Type  | Signal name| Enab
 142   |  I_O  |   0  |B10 |        |                 |       |            |
 143   |  I_O  |   0  |B12 |        |                 |       |            |
 144   | IN9   |   0  |    |        |                 |       |            |
-----------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
 
 &lt;Note&gt; GLB Pad : This notation refers to the GLB I/O pad number in the device.
 &lt;Note&gt; Assigned Pin : user or dedicated input assignment (E.g. Clock pins).
@@ -419,7 +433,7 @@ Pin No| Type  |Number|Pad |Pin     |     I/O Type    | Type  | Signal name| Enab
  Pin GLB  P LL PTs  S Type E S P E E P P                     Slew Pullup Signal
 </B>--------------------------------------------------------------------------------
   71   J  1  1   1  1 COM                   ----------------  Fast    Off <A href=#14>nled_0_</A>
-  70   J  1  1   1  1 COM                   ----------------  Fast    Off <A href=#13>nled_1_</A>
+  70   J  1  -   1  1 COM                   ----------------  Fast    Off <A href=#13>nled_1_</A>
   63   I  0  -   1  1 COM                   ----------------  Fast    Off <A href=#12>nled_2_</A>
   62   I  0  -   1  1 COM                   ----------------  Fast    Off <A href=#11>nled_3_</A>
   61   I  0  -   1  1 COM                   ----------------  Fast    Off <A href=#10>nled_4_</A>
@@ -464,13 +478,39 @@ Pin No| Type  |Number|Pad |Pin     |     I/O Type    | Type  | Signal name| Enab
 
 <A name="Buried_Signal_List"></A><FONT COLOR=maroon><U><B><big>Buried_Signal_List</big></B></U></FONT>
 <BR>
+<B>        I         C      P R P       Node
+        N         L Mc   R E U C I F Fanout
+Mc GLB  P LL PTs  S Type E S P E R P                     Signal
+</B>---------------------------------------------------------------------
+15   F  0  -   0  1 COM              1  ---------J------  <A href=#18>_dup_gnd_n_n</A>
+15   F  0  -   0  0 COM              1  ---------J------  <A href=#16>clk</A>
+15   C  0  -   0  1 COM                 ----------------  <A href=#15>gnd_n_n</A>
+---------------------------------------------------------------------
+
+&lt;Note&gt; CLS = Number of clusters used
+       INP = Number of input signals
+       PTs = Number of product terms
+        LL = Number of logic levels
+       PRE = Has preset equation
+       RES = Has reset equation
+       PUP = Power-Up initial state: R=Reset, S=Set
+        CE = Has clock enable equation
+        OE = Has output enable equation
+        IR = Input register
+        FP = Fast path used
+       OBP = ORP bypass used
 
 
 <A name="PostFit_Equations"></A><FONT COLOR=maroon><U><B><big>PostFit_Equations</big></B></U></FONT>
 <BR>
+
+<A name=18>_dup_gnd_n_n</A> = 0 ; (0 pterm, 0 signal)
+
+<A name=15>gnd_n_n</A> = 0 ; (0 pterm, 0 signal)
+
 <A name=14>nled_0_</A> = !<A href=#7>nrst</A> ; (1 pterm, 1 signal)
 
-<A name=13>nled_1_</A> = <A href=#7>nrst</A> ; (1 pterm, 1 signal)
+<A name=13>nled_1_</A> = !<A href=#16>clk</A> ; (1 pterm, 1 signal)
 
 <A name=12>nled_2_</A> = 1 ; (1 pterm, 0 signal)
 

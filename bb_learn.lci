@@ -152,3 +152,4 @@ layer = OFF;
 
 [OSCTIMER Assignments]
 layer = OFF;
+OSCTIMER = -, -, -, clk, 1048576;
