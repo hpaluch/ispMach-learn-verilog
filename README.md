@@ -44,11 +44,11 @@ module bb_top(nled,nrst);
   assign nled = ~led;
 
   // now we can use positive logic (1=active, 0=inactive)
-  assign led[0]   = ~rst;
+  assign led[0]   = rst;
   assign led[7:4] = 4'h0;
 
   wire clk; // 4.7Hz internal clock from OSCTIMER module  
-  assign led[1]   = clk; // output 4.7Hz clok on LED D2
+  assign led[1]   = clk; // output 4.7Hz clock on LED D2
 
   defparam I1.TIMER_DIV = "1048576";
   OSCTIMER I1 (.DYNOSCDIS(1'b0), .TIMERRES(1'b0), .OSCOUT(), .TIMEROUT(clk) );
@@ -70,9 +70,11 @@ endmodule
 
 Our _PostFit Equations_ are bellow:
 ```
+_dup_gnd_n_n = 0 ; (0 pterm, 0 signal)
+
 gnd_n_n = 0 ; (0 pterm, 0 signal)
 
-nled_0_ = !nrst ; (1 pterm, 1 signal)
+nled_0_ = nrst ; (1 pterm, 1 signal)
 
 nled_1_ = !clk ; (1 pterm, 1 signal)
 
