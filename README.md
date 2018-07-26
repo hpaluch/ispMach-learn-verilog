@@ -6,6 +6,13 @@ Learning Verilog HDL using cheap [ispMACH 4256ZE Breakout Board][]
 
 Please go to [Main Project Page] for table of contents and introduction
 
+> NOTE: This design requires working RESET circuit:
+>
+> ![RESET circuit](https://raw.githubusercontent.com/wiki/hpaluch/hpaluch.github.io/files/latt_reset_schema_cut.png)
+>
+> Please read [Adding RESET button to ispMACH 4256ZE Breakout Board][] for
+> complete instructions and tips.
+
 # Lesson 3 - counter with RESET
 
 Now we have 2-bit counter with asynchronous RESET (independent of clock)
@@ -107,6 +114,12 @@ And here is _RTL View_ from `bb_top.prj` using _Synplify Pro_:
 
 Please checkout/download this branch to get Project outputs
 
+# Navigation
+
+* [Main Project Page][] - table of contents - includes list of Lessons
+* [Lesson 2 - inverter][Previous Lesson]
+* [Lesson 4 - counter as module][Next Lesson]
+
 
 [ispMACH 4256ZE Breakout Board]: http://www.latticesemi.com/Products/DevelopmentBoardsAndKits/ispMACH4256ZEBreakoutBoard.aspx
 [Getting started with ispMACH 4256ZE Breakout Board]: https://github.com/hpaluch/hpaluch.github.io/wiki/Getting-started-with-ispMACH-4256ZE-Breakout-Board
@@ -115,4 +128,7 @@ Please checkout/download this branch to get Project outputs
 [bb_top.v]: https://github.com/hpaluch/ispMach-learn-verilog/blob/b-lesson3-counter-w-rst/bb_top.v
 [Main Project Page]: https://github.com/hpaluch/ispMach-learn-verilog
 [PostFit Equations]: https://github.com/hpaluch/ispMach-learn-verilog/blob/b-lesson3-counter-w-rst/equations.txt
+[Lesson 2 - inverter]: https://github.com/hpaluch/ispMach-learn-verilog/tree/b-lesson2-invert
+[Lesson 4 - counter as module]: https://github.com/hpaluch/ispMach-learn-verilog/tree/b-lesson4-counter-module
+
 
