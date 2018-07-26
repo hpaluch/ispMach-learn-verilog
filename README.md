@@ -6,7 +6,7 @@ Learning Verilog HDL using cheap [ispMACH 4256ZE Breakout Board][]
 
 Please go to [Main Project Page] for table of contents and introduction
 
-# Lesson 2 - inverter
+# Lesson 3 - counter with RESET
 
 Now we have 2-bit counter with asynchronous RESET (independent of clock)
 
