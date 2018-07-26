@@ -117,8 +117,8 @@ Please checkout/download this branch to get Project outputs
 # Navigation
 
 * [Main Project Page][] - table of contents - includes list of Lessons
-* [Lesson 2 - inverter][Previous Lesson]
-* [Lesson 4 - counter as module][Next Lesson]
+* [Lesson 2 - inverter][]
+* [Lesson 4 - counter as module][]
 
 
 [ispMACH 4256ZE Breakout Board]: http://www.latticesemi.com/Products/DevelopmentBoardsAndKits/ispMACH4256ZEBreakoutBoard.aspx
