@@ -50,7 +50,7 @@ synlog
 *.srr
 *.srs
 *.rs2
-*.txt
 *.prs
 syndos.env
 *.lc_
+run_options.txt
