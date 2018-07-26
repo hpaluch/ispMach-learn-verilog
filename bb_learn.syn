@@ -6,6 +6,8 @@ DEVKIT LC4256ZE-5TN144C
 ENTRY Pure Verilog HDL
 MODULE bb_top.v
 MODSTYLE bb_top Normal
+MODULE bb_counter.v
+MODSTYLE bb_counter Normal
 SYNTHESIS_TOOL Synplify
 SIMULATOR_TOOL ActiveHDL
 TOPMODULE bb_top
