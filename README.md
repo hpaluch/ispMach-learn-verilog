@@ -13,6 +13,7 @@ Requirements - please read/setup following:
 * [Lesson 1 - direct wire]
 * [Lesson 2 - inverter]
 * [Lesson 3 - counter with RESET]
+* [Lesson 4 - counter as module]
 
 # Latest project output
 Here are outputs from latest `master` branch:
@@ -29,4 +30,6 @@ Here are outputs from latest `master` branch:
 [PostFit Equations]:https://hpaluch.github.io/ispMach-learn-verilog/bb_learn_rpt.html#PostFit_Equations
 [Lesson 1 - direct wire]: https://github.com/hpaluch/ispMach-learn-verilog/tree/b-lesson1-direct-wire
 [Lesson 2 - inverter]: https://github.com/hpaluch/ispMach-learn-verilog/tree/b-lesson2-invert
-[Lesson 3 - counter with RESET]:  https://github.com/hpaluch/ispMach-learn-verilog/tree/b-lesson3-counter-w-rst 
+[Lesson 3 - counter with RESET]:  https://github.com/hpaluch/ispMach-learn-verilog/tree/b-lesson3-counter-w-rst
+[Lesson 4 - counter as module]: https://github.com/hpaluch/ispMach-learn-verilog/tree/b-lesson4-counter-module
+  
