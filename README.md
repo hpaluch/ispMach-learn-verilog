@@ -70,7 +70,7 @@ module bb_top(nled,nrst);
 endmodule
 ```
 
-Our _PostFit Equations_ are bellow:
+Our [PostFit Equations] are bellow:
 ```
 _dup_gnd_n_n = 0 ; (0 pterm, 0 signal)
 
@@ -114,3 +114,5 @@ Please checkout/download this branch to get Project outputs
 [JEDEC]: https://github.com/hpaluch/ispMach-learn-verilog/blob/b-lesson3-counter-w-rst/bb_learn.jed 
 [bb_top.v]: https://github.com/hpaluch/ispMach-learn-verilog/blob/b-lesson3-counter-w-rst/bb_top.v
 [Main Project Page]: https://github.com/hpaluch/ispMach-learn-verilog
+[PostFit Equations]: https://github.com/hpaluch/ispMach-learn-verilog/blob/b-lesson3-counter-w-rst/equations.txt
+
