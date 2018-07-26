@@ -133,6 +133,11 @@ And _Technology view using _Synplify Pro_:
 
 Please checkout/download this branch to get Project outputs
 
+# Navigation
+
+* [Main Project Page][] - table of contents - includes list of Lessons
+* [Lesson 3 - counter with RESET][Previous Lesson] 
+
 
 [ispMACH 4256ZE Breakout Board]: http://www.latticesemi.com/Products/DevelopmentBoardsAndKits/ispMACH4256ZEBreakoutBoard.aspx
 [Getting started with ispMACH 4256ZE Breakout Board]: https://github.com/hpaluch/hpaluch.github.io/wiki/Getting-started-with-ispMACH-4256ZE-Breakout-Board
