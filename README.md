@@ -136,7 +136,7 @@ Please checkout/download this branch to get Project outputs
 # Navigation
 
 * [Main Project Page][] - table of contents - includes list of Lessons
-* [Lesson 3 - counter with RESET][Previous Lesson] 
+* [Lesson 3 - counter with RESET][] 
 
 
 [ispMACH 4256ZE Breakout Board]: http://www.latticesemi.com/Products/DevelopmentBoardsAndKits/ispMACH4256ZEBreakoutBoard.aspx
