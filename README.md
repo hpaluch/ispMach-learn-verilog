@@ -88,8 +88,15 @@ module bb_counter(rst,clk,dout);
 endmodule
 ```
 
+_Functional Simulation_ of our [bb_counter.v] (= for counter only)
+using _Aldec Active-HDL_ is:
 
-Our [PostFit Equations] are bellow:
+![bb_counter functional simulation](https://raw.githubusercontent.com/hpaluch/ispMach-learn-verilog/b-lesson4-counter-module/images/func-sim0.png)
+
+Simulation Stimulus (_Test Fixture_ = TF) file is [bb_counter_tf.v].
+
+
+Our [PostFit Equations] for whole circuit are bellow:
 ```
 _dup_gnd_n_n = 0 ; (0 pterm, 0 signal)
 
@@ -125,7 +132,7 @@ And here is _RTL View_ from `bb_top.prj` using _Synplify Pro_:
 
 ![RTL View](https://raw.githubusercontent.com/hpaluch/ispMach-learn-verilog/b-lesson4-counter-module/images/rtl-view.png)
             
-And _Technology view using _Synplify Pro_:
+And _Technology view_ using _Synplify Pro_:
 
 ![Technology View](https://raw.githubusercontent.com/hpaluch/ispMach-learn-verilog/b-lesson4-counter-module/images/tech-view.png)            
 
@@ -145,6 +152,7 @@ Please checkout/download this branch to get Project outputs
 [JEDEC]: https://github.com/hpaluch/ispMach-learn-verilog/blob/b-lesson4-counter-module/bb_learn.jed 
 [bb_top.v]: https://github.com/hpaluch/ispMach-learn-verilog/blob/b-lesson4-counter-module/bb_top.v
 [bb_counter.v]: https://github.com/hpaluch/ispMach-learn-verilog/blob/b-lesson4-counter-module/bb_counter.v
+[bb_counter_tf.v]: https://github.com/hpaluch/ispMach-learn-verilog/blob/b-lesson4-counter-module/bb_counter_tf.v
 [Main Project Page]: https://github.com/hpaluch/ispMach-learn-verilog
 [PostFit Equations]: https://github.com/hpaluch/ispMach-learn-verilog/blob/b-lesson4-counter-module/equations.txt
 [Lesson 3 - counter with RESET]:  https://github.com/hpaluch/ispMach-learn-verilog/tree/b-lesson3-counter-w-rst
