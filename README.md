@@ -96,7 +96,7 @@ using _Aldec Active-HDL_ is:
 Simulation Stimulus (_Test Fixture_ = TF) file is [bb_counter_tf.v].
 
 > NOTE: I used different clock frequency for counter Simulation 
-> (100ns = 10MHz) instead of 7.6Hz (counter used by [bb_top.v]).
+> (100ns = 10MHz) instead of 4.7Hz (counter used by [bb_top.v]).
 
 Our [PostFit Equations] for whole circuit are bellow:
 ```
