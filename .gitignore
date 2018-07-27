@@ -54,3 +54,7 @@ synlog
 *.prs
 syndos.env
 *.lc_
+# Active-HDL simulation
+*.vado
+*.do
+*.udo
