@@ -145,7 +145,8 @@ Please checkout/download this branch to get Project outputs
 # Navigation
 
 * [Main Project Page][] - table of contents - includes list of Lessons
-* [Lesson 3 - counter with RESET][] 
+* [Lesson 3 - counter with RESET][] - previous lesson
+* [Lesson 5 - running light with decoder 2to4][] - next lesson 
 
 
 [ispMACH 4256ZE Breakout Board]: http://www.latticesemi.com/Products/DevelopmentBoardsAndKits/ispMACH4256ZEBreakoutBoard.aspx
@@ -158,3 +159,4 @@ Please checkout/download this branch to get Project outputs
 [Main Project Page]: https://github.com/hpaluch/ispMach-learn-verilog
 [PostFit Equations]: https://github.com/hpaluch/ispMach-learn-verilog/blob/b-lesson4-counter-module/equations.txt
 [Lesson 3 - counter with RESET]:  https://github.com/hpaluch/ispMach-learn-verilog/tree/b-lesson3-counter-w-rst
+[Lesson 5 - running light with decoder 2to4]: https://github.com/hpaluch/ispMach-learn-verilog/tree/b-lesson5-dec2to4
