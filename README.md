@@ -208,7 +208,7 @@ Please checkout/download this branch to get Project outputs
 
 * [Main Project Page][] - table of contents - includes list of Lessons
 * [Lesson 4 - counter as module] - previous lesson
-
+* [Lesson 6 - running light with rotating shift reg] - next lesson
 
 [ispMACH 4256ZE Breakout Board]: http://www.latticesemi.com/Products/DevelopmentBoardsAndKits/ispMACH4256ZEBreakoutBoard.aspx
 [Getting started with ispMACH 4256ZE Breakout Board]: https://github.com/hpaluch/hpaluch.github.io/wiki/Getting-started-with-ispMACH-4256ZE-Breakout-Board
@@ -223,3 +223,4 @@ Please checkout/download this branch to get Project outputs
 [PostFit Equations]: https://github.com/hpaluch/ispMach-learn-verilog/blob/b-lesson5-dec2to4/equations.txt
 [Lesson 4 - counter as module]: https://github.com/hpaluch/ispMach-learn-verilog/tree/b-lesson4-counter-module
 [74HCT139]: http://www.ti.com/lit/ds/symlink/sn74hct139.pdf
+[Lesson 6 - running light with rotating shift reg]: https://github.com/hpaluch/ispMach-learn-verilog/tree/b-lesson6-shift
