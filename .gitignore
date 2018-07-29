@@ -50,7 +50,6 @@ synlog
 *.srr
 *.srs
 *.rs2
-*.txt
 *.prs
 syndos.env
 *.lc_
@@ -58,3 +57,4 @@ syndos.env
 *.vado
 *.do
 *.udo
+run_options.txt
