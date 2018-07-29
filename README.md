@@ -161,6 +161,10 @@ nled_7_.AP = !nrst ; (1 pterm, 1 signal)
 >
 > I guess that it is because pin constraints of LEDs do not allow laying
 > out D flip-flops as needed for rotated bits.
+>
+> It is noteworthy that this variant (which seems to be much simpler
+> just one shift register instead of counter + address decoder)
+> uses more resources as is visible in [Reports 5 vs 6 diff].
 
 
 And here is _RTL View_ from `bb_top.prj` using _Synplify Pro_:
@@ -195,3 +199,4 @@ Please checkout/download this branch to get Project outputs
 [Main Project Page]: https://github.com/hpaluch/ispMach-learn-verilog
 [PostFit Equations]: https://github.com/hpaluch/ispMach-learn-verilog/blob/b-lesson6-shift/equations.txt
 [Lesson 5 - running light with decoder 2to4]: https://github.com/hpaluch/ispMach-learn-verilog/tree/b-lesson5-dec2to4
+[Reports 5 vs 6 diff]: https://github.com/hpaluch/ispMach-learn-verilog/compare/b-lesson5-dec2to4...b-lesson6-shift#diff-5e31d9b95204be9fe4cdb2896e699c64
