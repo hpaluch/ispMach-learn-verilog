@@ -76,6 +76,8 @@ module bb_top(nled,nrst);
 endmodule
 ```
 
+## 2-bit counter module
+
 Our Counter module [bb_counter.v] is:
 ```verilog
 module bb_counter(rst,clk,dout);
@@ -100,7 +102,23 @@ module bb_counter(rst,clk,dout);
 endmodule
 ```
 
-Our Decoder 2to4 module [bb_decoder2to4.v] is:
+_Functional Simulation_ of our [bb_counter.v]
+using _Aldec Active-HDL_ is:
+
+![bb_counter functional simulation](https://raw.githubusercontent.com/hpaluch/ispMach-learn-verilog/b-lesson5-dec2to4/images/func-sim0.png)
+
+Simulation Stimulus (_Test Fixture_ = TF) file is [bb_counter_tf.v].
+
+> NOTE: I used different clock frequency for counter Simulation 
+> (100ns = 10MHz) instead of 4.7Hz (counter used by [bb_top.v]).
+>
+> Timing does not matter for functional simulation
+> (there are no delays accounted in functional simulation)
+
+
+## Decoder 2 to 4 (bits)
+
+Our Decoder 2 to 4 module [bb_decoder2to4.v] is:
 ```verilog
 module bb_decoder2to4(addrin,yout);
   input  [1:0] addrin;
@@ -120,6 +138,19 @@ module bb_decoder2to4(addrin,yout);
 endmodule
 ```
 
+_Functional Simulation_ of our [bb_decoder2to4.v]
+using _Aldec Active-HDL_ is:
+
+![bb_decoder2to4 functional simulation](https://raw.githubusercontent.com/hpaluch/ispMach-learn-verilog/b-lesson5-dec2to4/images/func-sim-dec2to40.png)
+
+Simulation Stimulus (_Test Fixture_ = TF) file is [bb_decoder2to4_tf.v].
+
+> NOTE: I used different clock frequency for decoder simulation 
+> (100ns = 10MHz) instead of 4.7Hz (counter used by [bb_top.v]).
+>
+> Timing does not matter for functional simulation
+> (there are no delays accounted in functional simulation)
+
 > NOTE:
 >
 > This module is functionally similar to [74HCT139] with these exceptions:
@@ -127,28 +158,6 @@ endmodule
 > * no enable input (outputs are always enabled)
 > * only single decoder in this module (139 has 2 decoders) - however
 >   you can instantiate this module as much as you need
-
-
-
-_Functional Simulation_ of our [bb_counter.v] (= for counter only)
-using _Aldec Active-HDL_ is:
-
-![bb_counter functional simulation](https://raw.githubusercontent.com/hpaluch/ispMach-learn-verilog/b-lesson5-dec2to4/images/func-sim0.png)
-
-Simulation Stimulus (_Test Fixture_ = TF) file is [bb_counter_tf.v].
-
-> NOTE: I used different clock frequency for counter Simulation 
-> (100ns = 10MHz) instead of 4.7Hz (counter used by [bb_top.v]).
-
-_Functional Simulation_ of our [bb_decoder2to4.v] (= address decoder 2 to 4 only)
-using _Aldec Active-HDL_ is:
-
-![bb_decoder2to4 functional simulation](https://raw.githubusercontent.com/hpaluch/ispMach-learn-verilog/b-lesson5-dec2to4/images/func-sim-dec2to40.png)
-
-Simulation Stimulus (_Test Fixture_ = TF) file is [bb_decoder2to4_tf.v].
-
-> NOTE: I used different clock frequency for counter Simulation 
-> (100ns = 10MHz) instead of 4.7Hz (counter used by [bb_top.v]).
 
 
 Our [PostFit Equations] for whole circuit are bellow:
