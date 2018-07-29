@@ -58,3 +58,5 @@ syndos.env
 *.do
 *.udo
 run_options.txt
+*.tfi
+
