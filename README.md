@@ -15,6 +15,7 @@ Requirements - please read/setup following:
 * [Lesson 3 - counter with RESET]
 * [Lesson 4 - counter as module]
 * [Lesson 5 - running light with decoder 2to4]
+* [Lesson 6 - running light with rotating shift reg]
 
 # Latest project output
 Here are outputs from latest `master` branch:
@@ -34,4 +35,5 @@ Here are outputs from latest `master` branch:
 [Lesson 3 - counter with RESET]:  https://github.com/hpaluch/ispMach-learn-verilog/tree/b-lesson3-counter-w-rst
 [Lesson 4 - counter as module]: https://github.com/hpaluch/ispMach-learn-verilog/tree/b-lesson4-counter-module
 [Lesson 5 - running light with decoder 2to4]: https://github.com/hpaluch/ispMach-learn-verilog/tree/b-lesson5-dec2to4
+[Lesson 6 - running light with rotating shift reg]: https://github.com/hpaluch/ispMach-learn-verilog/tree/b-lesson6-shift
   
